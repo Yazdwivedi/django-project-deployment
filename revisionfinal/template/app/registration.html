@@ -1,0 +1,20 @@
+{% extends "app/base.html" %}
+{% block body_block %}
+{% if registered %}
+<p>Thank you for registering</p>
+{% else %}
+<div class="text-center">
+<h1>Register here</h1>
+</div>
+<br>
+<br>
+<form enctype="multipart/form-data" method="POST">
+  {%csrf_token%}
+  {{user_form.as_p }}
+  {{ additional_form.as_p }}
+
+
+  <input type="submit" name="" value="submit">
+  </form>
+{% endif %}
+{%endblock%}
