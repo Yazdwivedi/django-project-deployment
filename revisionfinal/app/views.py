@@ -3,7 +3,7 @@ from app.forms import userform,userformother
 # Create your views here.
 from django.contrib.auth import authenticate,login,logout
 from django.http import HttpResponse,HttpResponseRedirect
-from django.core.urlresolvers import reverse
+from django.urls import reverse
 from django.contrib.auth.decorators import login_required
 
 def index(request):
